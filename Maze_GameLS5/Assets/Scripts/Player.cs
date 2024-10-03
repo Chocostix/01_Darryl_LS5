@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public float speed;
     public Rigidbody rb;
     int cc;
+    public Text CC;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour
 
         if(cc == 4)
         {
-            SceneManager.LoadScene("Win");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
@@ -39,12 +41,15 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag == "Coin")
         {
             cc += 1;
+            CC.text = "Coins Collected: " + cc;
             Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "Hazard")
         {
+            
             SceneManager.LoadScene("Lose");
+            PlayerPrefs.SetInt("SS", SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

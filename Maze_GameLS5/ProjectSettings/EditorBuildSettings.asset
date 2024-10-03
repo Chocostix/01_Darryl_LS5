@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Lose.unity
-    guid: 47930d6e39a30b4499c8c22cfd2b9fcb
+    path: Assets/Scenes/Level2.unity
+    guid: 5e8483e9dada4e8438a9a6a3032aa9bc
   - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: bf445a36a7f7d68449b10c64a50b666f
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 47930d6e39a30b4499c8c22cfd2b9fcb
   m_configObjects: {}

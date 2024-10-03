@@ -7,6 +7,6 @@ public class Button : MonoBehaviour
 {
     public void Retry()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(PlayerPrefs.GetInt("SS"));
     }
 }
